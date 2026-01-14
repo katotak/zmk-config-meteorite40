@@ -33,12 +33,12 @@
 
         lang1 {
             bindings = <&kp LANG1>;
-            key-positions = <10 13>; /* A + F */
+            key-positions = <11 13>; /* S + F */
         };
 
         lang2 {
             bindings = <&kp LANG2>;
-            key-positions = <16 19>; /* J + - */
+            key-positions = <16 18>; /* J + L */
         };
 
         lang {
@@ -56,13 +56,13 @@
             key-positions = <1 2>; /* W + Q */
         };
 
-        del {
-            bindings = <&kp DEL>;
+        bspc {
+            bindings = <&kp BSPC>;
             key-positions = <7 8>; /* I + O */
         };
 
-        bspc {
-            bindings = <&kp BSPC>;
+        del {
+            bindings = <&kp DEL>;
             key-positions = <8 9>; /* O + P */
         };
 

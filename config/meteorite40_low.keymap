@@ -71,6 +71,10 @@
             key-positions = <18 19>; /* L + - */
         };
 
+        mb3 {
+            bindings = <&mkp MB3>;
+            key-positions = <25 35>; /* MB1 + MB2 */
+        };
     };
 
     keymap {

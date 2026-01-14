@@ -42,7 +42,7 @@
         };
 
         lang {
-            bindings = <&kp LANG_ZENKAKUHANKAKU>;
+            bindings = <&kp LC(SPACE)>;
             key-positions = <13 16>; /* F + J */
         };
 

@@ -24,51 +24,34 @@
 
         lang1 {
             bindings = <&kp LANG1>;
-            key-positions = <12 13>; /* D + F */
+            key-positions = <10 13>; /* A + F */
             layers = <0>;
         };
 
         lang2 {
             bindings = <&kp LANG2>;
-            key-positions = <16 17>; /* J + K */
+            key-positions = <16 19>; /* J + - */
             layers = <0>;
         };
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <20 21>; /* Z + X */
+            key-positions = <0 1>; /* Q + W */
             layers = <0>;
         };
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <0 1>; /* Q + W */
+            key-positions = <1 2>; /* W + Q */
             layers = <0>;
         };
 
-        home {
-            bindings = <&kp HOME>;
-            key-positions = <16 17>; /* J + K (on layer 2) */
-            layers = <2>;
+        del {
+            bindings = <&kp DEL>;
+            key-positions = <7 8>; /* I + O */
+            layers = <0>;
         };
 
-        end {
-            bindings = <&kp END>;
-            key-positions = <18 19>; /* L + - (on layer 2) */
-            layers = <2>;
-        };
-
-        ctrl_home {
-            bindings = <&kp LC(HOME)>;
-            key-positions = <16 18>; /* J + L (on layer 2) */
-            layers = <2>;
-        };
-
-        ctrl_end {
-            bindings = <&kp LC(END)>;
-            key-positions = <17 19>; /* K + - (on layer 2) */
-            layers = <2>;
-        };
     };
 
     keymap {

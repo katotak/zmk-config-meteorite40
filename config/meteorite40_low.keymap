@@ -52,6 +52,41 @@
             layers = <0>;
         };
 
+        mb1 {
+            bindings = <&mkp MB1>;
+            key-positions = <16 17>; /* J + K */
+            layers = <0>;
+        };
+
+        mb2 {
+            bindings = <&mkp MB2>;
+            key-positions = <17 18>; /* K + L */
+            layers = <0>;
+        };
+
+        mb3 {
+            bindings = <&mkp MB3>;
+            key-positions = <16 17>; /* J + K */
+            layers = <0>;
+        };
+
+        mb4 {
+            bindings = <&mkp MB4>;
+            key-positions = <15 16>; /* H + J */
+            layers = <0>;
+        };
+
+        mb5 {
+            bindings = <&mkp MB5>;
+            key-positions = <18 19>; /* L + - */
+            layers = <0>;
+        };
+
+        mb6 {
+            bindings = <&kp LC(W)>;
+            key-positions = <15 19>; /* H + - */
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -62,7 +97,7 @@
             display-name = "BASE";
             bindings = <
                 &kp Q       &kp W       &kp E        &kp R        &kp T                                     &kp Y      &kp U        &kp I            &kp O         &kp P
-                &kp A       &kp S       &kp D        &kp F        &kp G                                     &kp H      &kp J        &kp K            &kp L         &kp MINUS
+                &kp A       &kp S       &kp D        &kp F        &kp G                                     &kp H      &kp J        &kp K            &kp L         &lt 2 MINUS
                 &mt LWIN Z  &mt LALT X  &mt LCTRL C  &mt LSHFT V  &kp B        &mkp MB1         &mkp MB2    &kp N      &mt RSHFT M  &mt RCTRL COMMA  &mt RALT DOT  &mt RWIN SLASH
                                         &lt 4 LANG1  &lt 3 TAB    &lt 1 SPACE  &mt LCTRL ENTER  &lt 2 BSPC  &kp LSHFT  &lt 3 DEL    &lt 4 LANG2
             >;

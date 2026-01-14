@@ -34,6 +34,12 @@
             layers = <0>;
         };
 
+        lang {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <13 16>; /* F + J */
+            layers = <0>;
+        };
+
         esc {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>; /* Q + W */
@@ -52,41 +58,18 @@
             layers = <0>;
         };
 
-        mb1 {
-            bindings = <&mkp MB1>;
-            key-positions = <16 17>; /* J + K */
-            layers = <0>;
-        };
-
-        mb2 {
-            bindings = <&mkp MB2>;
-            key-positions = <17 18>; /* K + L */
-            layers = <0>;
-        };
-
-        mb3 {
-            bindings = <&mkp MB3>;
-            key-positions = <16 17>; /* J + K */
-            layers = <0>;
-        };
-
         mb4 {
             bindings = <&mkp MB4>;
-            key-positions = <15 16>; /* H + J */
+            key-positions = <25 26>; /* B + MB1 */
             layers = <0>;
         };
 
         mb5 {
             bindings = <&mkp MB5>;
-            key-positions = <18 19>; /* L + - */
+            key-positions = <27 28>; /* MB2 + N */
             layers = <0>;
         };
 
-        mb6 {
-            bindings = <&kp LC(W)>;
-            key-positions = <15 19>; /* H + - */
-            layers = <0>;
-        };
     };
 
     keymap {
@@ -136,10 +119,10 @@
         layer_4 {
 			display-name = "SETTING";
 			bindings = <
-				&ccfg C_CPI_DN  &ccfg C_CPI_UP  &ccfg C_ROT_DN   &ccfg C_ROT_UP   &ccfg C_SCALE_TOG                  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-				&ccfg C_SDIV_DN &ccfg C_SDIV_UP &ccfg C_SCRH_TOG &ccfg C_SCRV_TOG &none                              &bt BT_CLR    &bt BT_CLR_ALL  &none         &none         &none
-				&ccfg C_SAVE    &ccfg C_RESET   &none            &none            &none              &none   &none   &bootloader   &none           &none         &none         &none
-							                    &trans           &trans           &trans             &trans  &trans  &trans        &trans          &trans
+				&ccfg C_CPI_DN  &ccfg C_CPI_UP  &ccfg C_ROT_DN   &ccfg C_ROT_UP   &ccfg C_SCALE_TOG           &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+				&ccfg C_SDIV_DN &ccfg C_SDIV_UP &ccfg C_SCRH_TOG &ccfg C_SCRV_TOG &none                       &bt BT_CLR    &bt BT_CLR_ALL  &none         &none         &none
+				&ccfg C_SAVE    &ccfg C_RESET   &none            &none            &none     &none   &none     &bootloader   &none           &none         &none         &none
+							                    &trans           &trans           &trans    &trans  &trans    &trans        &trans          &trans
 			>;
         };
     };

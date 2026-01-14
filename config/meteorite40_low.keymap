@@ -19,55 +19,46 @@
 };
 
 / { 
+    behaviors {
+        td_mb: tap_dance_mouse_btn {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mkp MB4>, <&mkp MB5>, <&kp LC(W)>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
         lang1 {
             bindings = <&kp LANG1>;
             key-positions = <10 13>; /* A + F */
-            layers = <0>;
         };
 
         lang2 {
             bindings = <&kp LANG2>;
             key-positions = <16 19>; /* J + - */
-            layers = <0>;
         };
 
         lang {
             bindings = <&kp LC(SPACE)>;
             key-positions = <13 16>; /* F + J */
-            layers = <0>;
         };
 
         esc {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>; /* Q + W */
-            layers = <0>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <1 2>; /* W + Q */
-            layers = <0>;
         };
 
         del {
             bindings = <&kp DEL>;
             key-positions = <7 8>; /* I + O */
-            layers = <0>;
-        };
-
-        mb4 {
-            bindings = <&mkp MB4>;
-            key-positions = <25 26>; /* B + MB1 */
-            layers = <0>;
-        };
-
-        mb5 {
-            bindings = <&mkp MB5>;
-            key-positions = <27 28>; /* MB2 + N */
-            layers = <0>;
         };
 
     };
@@ -79,30 +70,30 @@
         win_default_layer {
             display-name = "BASE";
             bindings = <
-                &kp Q       &kp W       &kp E        &kp R        &kp T                                     &kp Y      &kp U        &kp I            &kp O         &kp P
-                &kp A       &kp S       &kp D        &kp F        &kp G                                     &kp H      &kp J        &kp K            &kp L         &lt 2 MINUS
-                &mt LWIN Z  &mt LALT X  &mt LCTRL C  &mt LSHFT V  &kp B        &mkp MB1         &mkp MB2    &kp N      &mt RSHFT M  &mt RCTRL COMMA  &mt RALT DOT  &mt RWIN SLASH
-                                        &lt 4 LANG1  &lt 3 TAB    &lt 1 SPACE  &mt LCTRL ENTER  &lt 2 BSPC  &kp LSHFT  &lt 3 DEL    &lt 4 LANG2
+                &kp Q       &kp W       &kp E        &kp R        &kp T                                &kp Y       &kp U        &kp I            &kp O         &kp P
+                &kp A       &kp S       &kp D        &kp F        &kp G                                &kp H       &kp J        &kp K            &kp L         &kp  MINUS
+                &mt LWIN Z  &mt LALT X  &mt LCTRL C  &mt LSHFT V  &kp B            &mkp MB2  &td_mb    &kp N       &mt RSHFT M  &mt RCTRL COMMA  &mt RALT DOT  &mt RWIN SLASH
+                                        &lt 3 TAB    &lt 1 SPACE  &mt LCTRL ENTER  &mkp MB1  &mo 2     &lt 3 BSPC  &kp LSHFT  &lt 4 DEL
             >;
         };
 
         layer_1 {
             display-name = "NUMSYM";
             bindings = <
-                &kp N1        &kp N2         &kp N3          &kp N4           &kp N5                         &kp N6  &kp N7     &kp N8          &kp N9         &kp N0
-                &kp PSCRN     &kp HOME       &kp UP          &kp END          &kp PG_UP                      &none   &kp GRAVE  &kp EQUAL       &kp SEMI       &kp SQT
-                &mt LWIN INS  &mt LALT LEFT  &mt LCTRL DOWN  &mt LSHFT RIGHT  &kp PG_DN  &mkp MB4  &mkp MB5  &none   &kp RSHFT  &mt RCTRL LBKT  &mt RALT RBKT  &mt RWIN BSLH
-                                             &trans          &trans           &trans     &trans    &trans    &trans  &trans     &trans
+                &kp N1        &kp N2         &kp N3          &kp N4           &kp N5                     &kp N6  &kp N7     &kp N8          &kp N9         &kp N0
+                &kp PSCRN     &kp HOME       &kp UP          &kp END          &kp PG_UP                  &none   &kp GRAVE  &kp EQUAL       &kp SEMI       &kp SQT
+                &mt LWIN INS  &mt LALT LEFT  &mt LCTRL DOWN  &mt LSHFT RIGHT  &kp PG_DN  &trans  &trans  &none   &kp RSHFT  &mt RCTRL LBKT  &mt RALT RBKT  &mt RWIN BSLH
+                                             &trans          &trans           &trans     &trans  &trans  &trans  &trans     &trans
             >;
         };
 
         layer_2 {
             display-name = "SCROLL";
             bindings = <
-                &none   &none   &none   &none   &none                       &none   &none   &none   &none   &none 
-                &none   &none   &none   &none   &none                       &none   &none   &none   &none   &none 
-                &none   &none   &none   &none   &none   &mkp MB1  &mkp MB2  &none   &none   &none   &none   &none 
-                                &trans  &trans  &trans  &trans    &trans    &trans  &trans  &trans
+                &none   &none   &none   &none   &none                   &none   &none   &none   &none   &none 
+                &none   &none   &none   &none   &none                   &none   &none   &none   &none   &none 
+                &none   &none   &none   &none   &none   &trans  &trans  &none   &none   &none   &none   &none 
+                                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -111,7 +102,7 @@
             bindings = <
                 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
                 &none   &none   &none   &none   &none                   &none   &none   &none   &none   &kp F11
-                &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &kp F12
+                &none   &none   &none   &none   &none   &trans  &trans  &none   &none   &none   &none   &kp F12
                                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
@@ -121,7 +112,7 @@
 			bindings = <
 				&ccfg C_CPI_DN  &ccfg C_CPI_UP  &ccfg C_ROT_DN   &ccfg C_ROT_UP   &ccfg C_SCALE_TOG           &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 				&ccfg C_SDIV_DN &ccfg C_SDIV_UP &ccfg C_SCRH_TOG &ccfg C_SCRV_TOG &none                       &bt BT_CLR    &bt BT_CLR_ALL  &none         &none         &none
-				&ccfg C_SAVE    &ccfg C_RESET   &none            &none            &none     &none   &none     &bootloader   &none           &none         &none         &none
+				&ccfg C_SAVE    &ccfg C_RESET   &none            &none            &none    trans  &trans    &bootloader   &none           &none         &none         &none
 							                    &trans           &trans           &trans    &trans  &trans    &trans        &trans          &trans
 			>;
         };

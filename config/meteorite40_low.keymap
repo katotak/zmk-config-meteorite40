@@ -93,7 +93,7 @@
 
         mb6 {
             bindings = <&kp LC(W)>;
-            key-positions = <24 + 27>; /* B + N */
+            key-positions = <24 27>; /* B + N */
         };
     };
 

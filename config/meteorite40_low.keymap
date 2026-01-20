@@ -41,9 +41,14 @@
             key-positions = <16 18>; /* J + L */
         };
 
-        lang {
+        ime-1 {
             bindings = <&kp LC(SPACE)>;
             key-positions = <13 16>; /* F + J */
+        };
+
+        ime-2 {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <34 37>; /* Space + Shift */
         };
 
         esc {

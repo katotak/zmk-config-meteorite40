@@ -48,7 +48,7 @@
 
         ime-2 {
             bindings = <&kp LC(SPACE)>;
-            key-positions = <34 37>; /* Space + Shift */
+            key-positions = <33 38>; /* ENTER + BSPC */
         };
 
         esc {
